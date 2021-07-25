@@ -42,6 +42,7 @@ figure {
    flex-wrap: wrap;
    align-items: center;
    justify-content: center;   
+   transition: all 0.6s ease-out 0.25s;
 
 }
 
@@ -56,4 +57,5 @@ figure:hover {
    color: white;
    box-shadow: 10px 10px 32px -4px rgba(0,0,0,0.75);
    transform: scale(1.75);
+   transition: all 1s ease-in 0.25s;
 }
