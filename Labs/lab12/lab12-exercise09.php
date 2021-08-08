@@ -3,7 +3,8 @@
  Outputs the relevant bootstrap markup to display the weather forcast 
  for a single day
 */
-function outputForecast($day,$high,$low) {
+function outputForecast($day, $high, $low)
+{
    echo '<div class="panel panel-default col-lg-3 col-md-3 col-sm-6">';
    echo '<div class="panel-heading">';
    echo '<h3 class="panel-title">' . $day . '</h3>';
@@ -19,29 +20,32 @@ function outputForecast($day,$high,$low) {
 ?>
 
 <html lang="en">
+
 <head>
    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-   <title>Exercise 12-9 Processing file uploads</title>   
-   
+   <title>Exercise 12-9 Processing file uploads</title>
+
    <!-- Latest compiled and minified Bootstrap Core CSS -->
    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body>
 
-<header>
-<h1>File access in PHP</h1>
-</header>
+   <header>
+      <h1>File access in PHP</h1>
+   </header>
 
-<div class='container'>
-<?php 
-//start by echoing the data in the file
-$fileContents = file_get_contents("datafile.txt");
-echo $fileContents;
+   <div class='container'>
+      <?php
+      //start by echoing the data in the file
+      $fileContents = file_get_contents("datafile.txt");
+      echo $fileContents;
 
 
-?>
-</div>
+      ?>
+   </div>
 
 
 </body>
+
 </html>
