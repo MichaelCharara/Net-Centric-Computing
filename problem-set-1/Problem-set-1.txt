@@ -1,0 +1,155 @@
+Problem Set 1
+
+		 Harvard Extension School CSCI E-93:
+			Computer Architecture
+
+			      Fall 2021
+
+	Due: September 12, 2021 at Midnight ET (Eastern Time)
+
+Total of 114 Points
+
+As described in the syllabus, submit the solution to all problems in
+this Problem Set using "git" with named branch problem-set-1.
+
+1. (10 Points) Katz and Borriello 1.17.
+
+   (Truth Tables) Consider a function that takes as input two 2-bit
+   numbers and produces as output a 3-bit sum.  Write the truth table
+   for this function.  It should have four input columns, 16 rows, and
+   three output columns.
+
+   For this problem -- and for all other problems that require a truth
+   table -- please follow the examples in our class Boolean Logic
+   slides and the following guidelines.  All inputs should be on the
+   left and all outputs should be on the right.  Inputs should be
+   separated from outputs by a double vertical line.  Each input
+   should be separated from other inputs by a single vertical line.
+   The names of the inputs should be in alphabetical order from left
+   to right.  Each output should be separated from other outputs by a
+   single vertical line.  The title row should be separated from the
+   other rows by a double horizontal line.  All the other rows should
+   be separated by a single horizontal line.  The rows of the truth
+   table should be listed in ascending order taking all the inputs as
+   a binary number, as shown in the following example:
+
+       A  |  B  |  C  ||  A+B  |  B*C
+     =====|=====|=====||=======|=======
+       0  |  0  |  0  ||   0   |   0
+     -----|-----|-----||-------|-------
+       0  |  0  |  1  ||   0   |   0
+     -----|-----|-----||-------|-------
+       0  |  1  |  0  ||   1   |   0
+     -----|-----|-----||-------|-------
+       0  |  1  |  1  ||   1   |   1
+     -----|-----|-----||-------|-------
+       1  |  0  |  0  ||   1   |   0
+     -----|-----|-----||-------|-------
+       1  |  0  |  1  ||   1   |   0
+     -----|-----|-----||-------|-------
+       1  |  1  |  0  ||   1   |   0
+     -----|-----|-----||-------|-------
+       1  |  1  |  1  ||   1   |   1
+
+   In the above example, the + operator represents logical OR, and the
+   * operator represents logical AND.
+
+2. (10 Points) Katz and Borriello 2.6
+
+   (Laws and Theorems of Boolean Algebra) Prove the following
+   simplification theorems using the first eight laws of Boolean
+   algebra:
+
+   a.	(X + Y)(X + Y') = X
+   b.	X(X + Y) = X
+   c.	(X + Y')Y = XY
+   d.	(X + Y)(X' + Z) = XZ + X'Y
+
+3. (10 Points) Katz and Borriello 2.17
+
+   (Boolean Simplification) Simplify the following functions using the
+   theorems of Boolean algebra. Write the particular law or theorem
+   you are using in each step. For each function, by how many literals
+   did you reduce its representation?
+   
+   a.	f(X, Y) = XY + XY'
+   b.	f(X, Y) = (X + Y)(X + Y')
+   c.	f(X, Y, Z) = Y'Z + X'YZ + XYZ
+   d.	f(X, Y, Z) = (X + Y)(X' + Y + Z)()(X' + Y + Z')
+   e.	f(W, X, Y, Z) = X + XYZ + X'YZ + X'Y + WX + WX'
+
+4. (10 Points) Katz and Borriello 2.30 (parts a and b only)
+
+   (Laws and Theorems of Boolean Algebra) Simplify the following
+   expressions using the laws and theorems of Boolean algebra:
+   
+   a.	W(A, B, C) = A'BC' + A'BC + AB'C' + AB'C
+   b.	X(A, B, C) = A'B'C' + A'BC + AB'C' + ABC
+
+5. (10 Points) Katz and Borriello 2.40 (part a)
+
+   (Combinatorial Logic Design) Write a truth table for the function
+   described by the following specification:
+
+   A 2-bit-wide shifter takes two input signals, i0 and i1, and shifts
+   them to two outputs, o0 and o1, under the control of a shift
+   signal.  If this signal SHIFT is false, then the outputs are equal
+   to their corresponding inputs.  If SHIFT is true, then o1 is i0 and
+   o0 is set to 0.
+
+6. (10 Points) Katz and Borriello 2.40 (part b)
+
+   (Combinatorial Logic Design) Write a truth table for the function
+   described by the following specification:
+
+   A 1-bit demultiplexer takes an input signal IN and routes it to one
+   of two outputs, o0 and o1, under the control of a single SELECT
+   signal.  If SELECT is 0, then o0 has the value of IN and o1 is a 0.
+   If SELECT is 1, then o1 has the value of IN and o0 is a 0.
+
+7. (10 Points) Katz and Borriello 2.40 (part c)
+
+   (Combinatorial Logic Design) Write a truth table for the function
+   described by the following specification:
+
+   A 2-bit multiplexer takes two input signals, i0 and i1, and routes
+   one of them to the single output OUT under the control of a 1-bit
+   select signal.  If the SELECT signal is false, then OUT is equal to
+   i0.  If SELECT is true, then OUT is equal to i1.
+
+8. (15 Points) Katz and Borriello 2.41.
+
+   (Boolean Simplification) Write sum-of-products expressions for the
+   truth tables of Exercise 2.40 (i.e., for problems 5, 6, and 7
+   above).  Minimize them using K-maps.
+
+   For this problem -- and for all other problems that require a K-map
+   -- please follow the examples in our class Gray Codes & Karnaugh
+   Maps slides and in Katz and Borriello's Figure 2.42 on Page 70.  To
+   be more specific, please list input variables in alphabetical order
+   with the earlier names in alphabetical order labelling the columns
+   from left to right and the later names in alphabetical order
+   labelling the rows from top to bottom.
+
+9. (9 Points) Katz and Borriello 2.42
+
+   (Gates) Given the Boolean expressions of Exercise 2.41, draw logic
+   schematics using AND, OR, and INVERT gates that implement those
+   functions.
+
+10. (20 Points) Katz and Borriello 2.46 (parts a and b only)
+
+    In this chapter, we've examined a 2-bit binary adder circuit.  Now
+    consider a 2-bit binary subtractor, defined as follows.  The
+    inputs (A, B) and (C, D) form the two 2-bit numbers N1 and N2.
+    The circuit will form the differences N1 - N2 on the output F
+    (most significant) and G (least significant).  Assume that the
+    circuit never sees an input combination in which N1 is less than
+    N2.  The output bits are don't cares in these cases.
+
+    a.	Fill in the 4-variable truth table for F and G.
+    b.	Fill in the K-map for the minimum sum-of-products expression
+	for the functions F and G.
+
+
+			Last revised 5-Sep-21
